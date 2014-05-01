@@ -1,14 +1,15 @@
 ﻿using System.Data.Entity;
+using Northwind.Model;
 using Northwind.Model.Models;
 using Northwind.Model.Models.Mapping;
 
 namespace Northwind.Data.EntityFramework
 {
-    public partial class DataContext : DbContext
+    public class DataContext : DbContext
     {
         static DataContext()
         {
-            Database.SetInitializer<Data.NorthwindContext>(null);
+            Database.SetInitializer<DataContext>(null);
         }
         public DataContext() : base("Name=DataContext") { }
 

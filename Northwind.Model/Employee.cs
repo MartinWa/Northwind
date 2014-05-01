@@ -1,7 +1,8 @@
 using System;
 using System.Collections.Generic;
+using Northwind.Model.Models;
 
-namespace Northwind.Model.Models
+namespace Northwind.Model
 {
     public partial class Employee
     {

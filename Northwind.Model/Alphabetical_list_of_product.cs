@@ -1,7 +1,6 @@
 using System;
-using System.Collections.Generic;
 
-namespace Northwind.Model.Models
+namespace Northwind.Model
 {
     public partial class Alphabetical_list_of_product
     {

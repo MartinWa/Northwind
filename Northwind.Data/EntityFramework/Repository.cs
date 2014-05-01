@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace Northwind.Data.EntityFramework
 {
-    public class Repository<T> : IRepository<T> where T : class
+    internal class Repository<T> : IRepository<T> where T : class
     {
         private readonly DbSet<T> _dbSet;
         private readonly DataContext _context;

@@ -1,7 +1,4 @@
-using System;
-using System.Collections.Generic;
-
-namespace Northwind.Model.Models
+namespace Northwind.Model
 {
     public partial class Customer_and_Suppliers_by_City
     {

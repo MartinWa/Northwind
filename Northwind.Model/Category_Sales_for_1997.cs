@@ -1,7 +1,6 @@
 using System;
-using System.Collections.Generic;
 
-namespace Northwind.Model.Models
+namespace Northwind.Model
 {
     public partial class Category_Sales_for_1997
     {
