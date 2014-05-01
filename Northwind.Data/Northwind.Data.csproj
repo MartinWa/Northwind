@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A4467BC9-764E-4A78-988B-7F21831043B5}</ProjectGuid>
+    <ProjectGuid>{5ABD279C-23EF-4B69-9443-2250C07D26A8}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Northwind.Model</RootNamespace>
-    <AssemblyName>Northwind.Model</AssemblyName>
+    <RootNamespace>Northwind.Data</RootNamespace>
+    <AssemblyName>Northwind.Data</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
@@ -48,65 +48,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Alphabetical_list_of_product.cs" />
-    <Compile Include="Category.cs" />
-    <Compile Include="Category_Sales_for_1997.cs" />
-    <Compile Include="Current_Product_List.cs" />
-    <Compile Include="Customer.cs" />
-    <Compile Include="CustomerDemographic.cs" />
-    <Compile Include="Customer_and_Suppliers_by_City.cs" />
-    <Compile Include="Employee.cs" />
-    <Compile Include="Invoice.cs" />
-    <Compile Include="Models\Mapping\Alphabetical_list_of_productMap.cs" />
-    <Compile Include="Models\Mapping\CategoryMap.cs" />
-    <Compile Include="Models\Mapping\Category_Sales_for_1997Map.cs" />
-    <Compile Include="Models\Mapping\Current_Product_ListMap.cs" />
-    <Compile Include="Models\Mapping\CustomerDemographicMap.cs" />
-    <Compile Include="Models\Mapping\CustomerMap.cs" />
-    <Compile Include="Models\Mapping\Customer_and_Suppliers_by_CityMap.cs" />
-    <Compile Include="Models\Mapping\EmployeeMap.cs" />
-    <Compile Include="Models\Mapping\InvoiceMap.cs" />
-    <Compile Include="Models\Mapping\OrderMap.cs" />
-    <Compile Include="Models\Mapping\Orders_QryMap.cs" />
-    <Compile Include="Models\Mapping\Order_DetailMap.cs" />
-    <Compile Include="Models\Mapping\Order_Details_ExtendedMap.cs" />
-    <Compile Include="Models\Mapping\Order_SubtotalMap.cs" />
-    <Compile Include="Models\Mapping\ProductMap.cs" />
-    <Compile Include="Models\Mapping\Products_Above_Average_PriceMap.cs" />
-    <Compile Include="Models\Mapping\Products_by_CategoryMap.cs" />
-    <Compile Include="Models\Mapping\Product_Sales_for_1997Map.cs" />
-    <Compile Include="Models\Mapping\RegionMap.cs" />
-    <Compile Include="Models\Mapping\Sales_by_CategoryMap.cs" />
-    <Compile Include="Models\Mapping\Sales_Totals_by_AmountMap.cs" />
-    <Compile Include="Models\Mapping\ShipperMap.cs" />
-    <Compile Include="Models\Mapping\Summary_of_Sales_by_QuarterMap.cs" />
-    <Compile Include="Models\Mapping\Summary_of_Sales_by_YearMap.cs" />
-    <Compile Include="Models\Mapping\SupplierMap.cs" />
-    <Compile Include="Models\Mapping\sysdiagramMap.cs" />
-    <Compile Include="Models\Mapping\TerritoryMap.cs" />
-    <Compile Include="Order.cs" />
-    <Compile Include="Orders_Qry.cs" />
-    <Compile Include="Order_Detail.cs" />
-    <Compile Include="Order_Details_Extended.cs" />
-    <Compile Include="Order_Subtotal.cs" />
-    <Compile Include="Product.cs" />
-    <Compile Include="Products_Above_Average_Price.cs" />
-    <Compile Include="Products_by_Category.cs" />
-    <Compile Include="Product_Sales_for_1997.cs" />
-    <Compile Include="Region.cs" />
-    <Compile Include="Sales_by_Category.cs" />
-    <Compile Include="Sales_Totals_by_Amount.cs" />
-    <Compile Include="Shipper.cs" />
-    <Compile Include="Summary_of_Sales_by_Quarter.cs" />
-    <Compile Include="Summary_of_Sales_by_Year.cs" />
-    <Compile Include="Supplier.cs" />
-    <Compile Include="sysdiagram.cs" />
-    <Compile Include="Territory.cs" />
+    <Compile Include="EntityFramework\DataContext.cs" />
+    <Compile Include="EntityFramework\Repository.cs" />
+    <Compile Include="EntityFramework\UnitOfWork.cs" />
+    <Compile Include="IRepository.cs" />
+    <Compile Include="IUnitOfWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Northwind.Model\Northwind.Model.csproj">
+      <Project>{A4467BC9-764E-4A78-988B-7F21831043B5}</Project>
+      <Name>Northwind.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />

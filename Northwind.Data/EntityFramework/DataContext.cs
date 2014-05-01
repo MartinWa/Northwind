@@ -1,20 +1,16 @@
-using System.Data.Entity;
-using System.Data.Entity.Infrastructure;
+﻿using System.Data.Entity;
+using Northwind.Model.Models;
 using Northwind.Model.Models.Mapping;
 
-namespace Northwind.Model.Models
+namespace Northwind.Data.EntityFramework
 {
-    public partial class NorthwindContext : DbContext
+    public partial class DataContext : DbContext
     {
-        static NorthwindContext()
+        static DataContext()
         {
-            Database.SetInitializer<NorthwindContext>(null);
+            Database.SetInitializer<Data.NorthwindContext>(null);
         }
-
-        public NorthwindContext()
-            : base("Name=NorthwindContext")
-        {
-        }
+        public DataContext() : base("Name=DataContext") { }
 
         public DbSet<Category> Categories { get; set; }
         public DbSet<CustomerDemographic> CustomerDemographics { get; set; }
